@@ -13,4 +13,5 @@
     'data': [],
     'demo': [],
     'application': True,
+    'license': 'OPL-1',
 }
