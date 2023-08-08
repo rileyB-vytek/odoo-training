@@ -14,4 +14,5 @@
     'data': [],
     'demo': [],
     'application': True,
+    'version': '0.1',
 }
