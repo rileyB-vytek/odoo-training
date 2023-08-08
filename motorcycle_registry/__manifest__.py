@@ -11,7 +11,9 @@
     'website': 'https://github.com/rileyB-vytek/odoo-training',
     'depends': ['base'],
     'data': [],
-    'demo': [],
+    'demo': [
+        'demo/registry_demo.xml',
+    ],
     'application': True,
     'license': 'OPL-1',
 }
