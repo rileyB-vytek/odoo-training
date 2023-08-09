@@ -10,7 +10,11 @@
     'category': 'Kawaiil/Custom Modules',
     'website': 'https://github.com/rileyB-vytek/odoo-training',
     'depends': ['base'],
-    'data': [],
+    'data': [
+        'security/motorcycle_registry_groups.xml',
+        'security/ir.model.access.csv',
+        'views/motorcycle_registry_menuitems.xml',
+    ],
     'demo': [
         'demo/registry_demo.xml',
     ],
