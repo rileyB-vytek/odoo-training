@@ -26,7 +26,9 @@
                     </group>
                     <notebook>
                         <page string="Related Documents">
-                            <field name="certificate_title"/>
+                            <group>
+                                <field name="certificate_title"/>
+                            </group>
                         </page>
                     </notebook>
                 </sheet>
