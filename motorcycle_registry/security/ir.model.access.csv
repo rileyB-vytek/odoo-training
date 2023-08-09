@@ -1,0 +1,4 @@
+id,name,model_id/id,group_id/id,perm_read,perm_write,perm_create,perm_unlink
+registry_admin,registry admin,model_motorcycle_registry_registry,group_motorcycle_registry_admin,1,1,1,1
+registry_user,registry user,model_motorcycle_registry_registry,group_motorcycle_registry_user,1,0,1,0
+registry_read_all,registry real all,model_motorcycle_registry_registry,,1,0,0,0
