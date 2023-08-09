@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="course_view_form" model="ir.ui.view">
+        <field name="name">course.view.form</field>
+        <field name="model">academy.course</field>
+        <field name="arch" type="xml">
+            <form string="Course View">
+                <header></header>
+                <sheet>
+                    <h1><field name="name"/></h1>
+                    <group>
+                        <group>
+                            <separator string="Course Settings"/>
+                            <field name="level"/>
+                            <field name="active"/>
+                        </group>
+                        <group>
+                            <separator string="Other Fields"/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="Description">
+                            <group>
+                                <field name="description"/>
+                            </group>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    
+    <record id="course_view_list" model="ir.ui.view">
+        <field name="name">course.view.list</field>
+        <field name="model">academy.course</field>
+        <field name="arch" type="xml">
+            <tree string="Course List">
+                <field name="name"/>
+                <field name="level"/>
+                <field name="description"/>
+                <field name="create_date" optional="hide"/>
+            </tree>
+        </field>
+    </record>
+    
+    <record id="course_view_search" model="ir.ui.view">
+        <field name="name">course.view.search</field>
+        <field name="model">academy.course</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="name"/>
+                <field name="description"/>
+                <filter name="groupby_level" string="Level" context="{'group_by':'level'}"/>
+            </search>
+        </field>
+    </record>
+</odoo>
