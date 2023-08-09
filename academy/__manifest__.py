@@ -15,8 +15,10 @@
         'security/academy_groups.xml',
         'security/ir.model.access.csv',
         'security/academy_security.xml',
+        'data/session_data.xml',
         'views/academy_menuitems.xml',
         'views/course_views.xml',
+        'views/session_views.xml',
     ],
     'demo': [
         'demo/course_demo.xml',

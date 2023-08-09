@@ -7,6 +7,8 @@ class Course(models.Model):
     name = fields.Char(string="Title", required=True)
     active = fields.Boolean(string="Active", default=True)
 
+    image = fields.Image(string="Image")
+    
     description = fields.Text()
     level = fields.Selection(string="Level",
                              selection=[

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="session_view_form" model="ir.ui.view">
+        <field name="name">session.view.form</field>
+        <field name="model">academy.session</field>
+        <field name="arch" type="xml">
+            <form string="Session View">
+                <header></header>
+                <sheet>
+                    <h1><field name="name"/></h1>
+                    <h2><field name="session_number"/></h2>
+                    <group>
+                        <group>
+                            <separator string="Session Data"/>
+                            <label string="Date" for="date_start"/>
+                            <div class="o_row">
+                                <field name="date_start" widget="daterange" options="{'related_end_date':'date_end'}" class="oe_label" nolabel="1"/>
+                                <field name="date_end" widget="daterange" options="{'related_start_date':'date_start'}" class="oe_label" nolabel="1"/>
+                            </div>
+                        </group>
+                        <group>
+                            <separator string="Other Fields"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    
+    <record id="session_view_list" model="ir.ui.view">
+        <field name="name">session.view.list</field>
+        <field name="model">academy.session</field>
+        <field name="arch" type="xml">
+            <tree string="Session List">
+                <field name="name"/>
+                <field name="session_number"/>
+                <field name="date_start"/>
+                <field name="date_end"/>
+            </tree>
+        </field>
+    </record>
+    
+    <record id="session_view_search" model="ir.ui.view">
+        <field name="name">session.view.search</field>
+        <field name="model">academy.session</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="name"/>
+                <field name="session_number"/>
+                <field name="date_start"/>
+                <filter string="Start Date" name="start_date" date="date_start"/>
+            </search>
+        </field>
+    </record>
+</odoo>

@@ -8,6 +8,8 @@
                 <header></header>
                 <sheet>
                     <h1><field name="name"/></h1>
+                    
+                    <field name="image" widget="image" class="oe_avatar"/>
                     <group>
                         <group>
                             <separator string="Course Settings"/>
