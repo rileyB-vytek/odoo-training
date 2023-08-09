@@ -8,20 +8,19 @@
                 <header></header>
                 <sheet>
                     <h1><field name="registry_number"/></h1>
+                    <field name="image" widget="image" class="oe_avatar"/>
                     <group>
                         <group>
-                            <separator string="Registry Details"/>
-                            <field name="registry_number"/>
-                            <field name="vin"/>
-                            <field name="license_plate"/>
+                            <separator string="Motorcycle Information"/>
                             <field name="register_date"/>
-                            <field name="first_name"/>
-                            <field name="last_name"/>
+                            <field name="vin"/>
+                            <field name="current_mileage"/>
+                            <field name="license_plate"/>
                         </group>
                         <group>
-                            <separator string="Other Fields"/>
-                            <field name="current_mileage"/>
-                            <field name="image"/>
+                            <separator string="Owner Information"/>
+                            <field name="first_name"/>
+                            <field name="last_name"/>
                         </group>
                     </group>
                     <notebook>
