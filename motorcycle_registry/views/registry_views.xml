@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
     <record id="registry_view_form" model="ir.ui.view">
-        <field name="name">registry.view.form</field>
+        <field name="name">motorcycle.registry.view.form</field>
         <field name="model">motorcycle_registry.registry</field>
         <field name="arch" type="xml">
             <form string="Registry View">
@@ -36,7 +36,7 @@
     </record>
     
     <record id="registry_view_list" model="ir.ui.view">
-        <field name="name">registry.view.list</field>
+        <field name="name">motorcycle.registry.view.list</field>
         <field name="model">motorcycle_registry.registry</field>
         <field name="arch" type="xml">
             <tree string="Registry List">
@@ -50,7 +50,7 @@
     </record>
     
     <record id="registry_view_search" model="ir.ui.view">
-        <field name="name">registry.view.search</field>
+        <field name="name">motorcycle.registry.view.search</field>
         <field name="model">motorcycle_registry.registry</field>
         <field name="arch" type="xml">
             <search>
