@@ -29,6 +29,14 @@
                         <page string="Description">
                             <field name="description"/>
                         </page>
+                        <page string="Students">
+                            <field name="student_ids">
+                                <tree>
+                                    <field name="name"/>
+                                    <field name="phone"/>
+                                </tree>
+                            </field>
+                        </page>
                     </notebook>
                 </sheet>
             </form>
