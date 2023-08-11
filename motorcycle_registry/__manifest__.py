@@ -18,7 +18,7 @@
         'views/registry_views.xml',
     ],
     'demo': [
-        
+        'demo/registry_demo.xml',
     ],
     'application': True,
     'license': 'OPL-1',
