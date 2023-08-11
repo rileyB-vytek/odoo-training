@@ -12,20 +12,19 @@
                     <group>
                         <group>
                             <separator string="Motorcycle Information"/>
+                            <field name="register_date"/>
+                            <field name="current_mileage"/>
+                            <field name="license_plate"/>
                             <field name="vin"/>
                             <field name="make"/>
                             <field name="model"/>
                             <field name="year"/>
-                            <field name="battery_capacity"/>
-                            <field name="serial_number"/>
-                            <field name="register_date"/>
-                            <field name="current_mileage"/>
-                            <field name="license_plate"/>
                         </group>
                         <group>
                             <separator string="Owner Information"/>
-                            <field name="first_name"/>
-                            <field name="last_name"/>
+                            <field name="owner_id"/>
+                            <field name="email"/>
+                            <field name="phone"/>
                         </group>
                     </group>
                     <notebook>
@@ -48,8 +47,7 @@
                 <field name="registry_number"/>
                 <field name="vin"/>
                 <field name="license_plate"/>
-                <field name="first_name"/>
-                <field name="last_name"/>
+                <field name="owner_id"/>
             </tree>
         </field>
     </record>
@@ -61,8 +59,8 @@
             <search>
                 <field name="registry_number"/>
                 <field name="vin"/>
-                <field name="last_name"/>
                 <field name="license_plate"/>
+                <field name="owner_id"/>
             </search>
         </field>
     </record>
