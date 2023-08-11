@@ -6,7 +6,8 @@ class Registry(models.Model):
     _name = "motorcycle_registry.registry"
     _description = "Motorcycle Registry"
     _rec_name = "registry_number"
-
+    _sql_constraints = [ ('vin','UNIQUE(vin)','VIN number already exists'), ]
+    
     registry_number = fields.Char(string="Motorcycle Registry Number (MRN)", default="MRN0000", copy=False, required=True, readonly=True)
     
     vin = fields.Char(string="VIN", required=True)
@@ -36,7 +37,7 @@ class Registry(models.Model):
                 
     @api.constrains("vin")
     def _check_vin_pattern(self):
-        for registry in self(lambda r: r.vin):
+        for registry in self.filtered(lambda r: r.vin):
             match = re.match("^[A-Z]{4}\d{2}[A-Z0-9]{2}\d{5}$", registry.vin)
             if not match:
                 raise ValidationError("""The VIN must match the specified pattern.
