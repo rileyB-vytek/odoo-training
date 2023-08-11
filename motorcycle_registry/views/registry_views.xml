@@ -12,8 +12,13 @@
                     <group>
                         <group>
                             <separator string="Motorcycle Information"/>
-                            <field name="register_date"/>
                             <field name="vin"/>
+                            <field name="make"/>
+                            <field name="model"/>
+                            <field name="year"/>
+                            <field name="battery_capacity"/>
+                            <field name="serial_number"/>
+                            <field name="register_date"/>
                             <field name="current_mileage"/>
                             <field name="license_plate"/>
                         </group>
