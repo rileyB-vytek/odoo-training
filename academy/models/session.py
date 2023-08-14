@@ -24,6 +24,10 @@ class Session(models.Model):
     student_ids = fields.Many2many(comodel_name="res.partner", string="Students")
 
     description = fields.Text(related="course_id.description")
+
+    currency_id = fields.Many2one(comodel_name="res.currency", string="Currency", default= lambda self:self.env.company.currency_id.id)
+    
+    total_price = fields.Monetary(string="Total Price", currency_field="currency_id", related="course_id.total_price")
     
     @api.model_create_multi
     def create(self, vals_list):
