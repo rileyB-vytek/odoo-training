@@ -38,7 +38,7 @@ class Registry(models.Model):
     @api.constrains("vin")
     def _check_vin_pattern(self):
         for registry in self.filtered(lambda r: r.vin):
-            match = re.match("^[A-Z]{4}\d{2}[A-Z0-9]{2}\d{5}$", registry.vin)
+            match = re.match("^[A-Z]{4}\d{2}[A-Z0-9]{2}\d{6}$", registry.vin)
             if not match:
                 raise ValidationError("""The VIN must match the specified pattern.
                 ● Make - 2 Capital Letters
@@ -50,7 +50,7 @@ class Registry(models.Model):
     @api.constrains("license_plate")
     def _check_license_plate_pattern(self):
         for registry in self.filtered(lambda r: r.license_plate):
-            match = re.match("^[A-Z]{1,3}\d{1,4}[A-Z]{0,2}$", registry.license_plate)
+            match = re.match("^[A-Z]{1,4}\d{1,3}[A-Z]{0,2}$", registry.license_plate)
             if not match:
                 raise ValidationError("""The License Plate must match the specified pattern.
                 ● 1 - 4 Capital Letters
