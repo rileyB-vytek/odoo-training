@@ -2,22 +2,22 @@
 <odoo>
     <data noupdate="1">
         <record id="registry_01" model="motorcycle_registry.registry">
-            <field name="registry_number">1</field>
-            <field name="vin">1</field>
-            <field name="first_name">John</field>
-            <field name="last_name">Smith</field>
+            <field name="registry_number">MRN0001</field>
+            <field name="vin">KAIN110M000123</field>
+            <field name="license_plate">KLV453</field>
+            <field name="owner_id" ref="base.res_partner_address_1"/>
         </record>
         <record id="registry_02" model="motorcycle_registry.registry">
-            <field name="registry_number">1</field>
-            <field name="vin">2</field>
-            <field name="first_name">Guy</field>
-            <field name="last_name">Dude</field>
+            <field name="registry_number">MRN0002</field>
+            <field name="vin">KAUK22XL847320</field>
+            <field name="license_plate">KLR345L</field>
+            <field name="owner_id" ref="base.res_partner_address_3"/>
         </record>
         <record id="registry_03" model="motorcycle_registry.registry">
-            <field name="registry_number">1</field>
-            <field name="vin">3</field>
-            <field name="first_name">Jane</field>
-            <field name="last_name">Doe</field>
+            <field name="registry_number">MRN0003</field>
+            <field name="vin">KAAB33XL847320</field>
+            <field name="license_plate">KAB123X</field>
+            <field name="owner_id" ref="base.res_partner_address_5"/>
         </record>
     </data>
 </odoo>
