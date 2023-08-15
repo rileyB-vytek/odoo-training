@@ -11,13 +11,13 @@ class Registry(models.Model):
     registry_number = fields.Char(string="Motorcycle Registry Number (MRN)", default="MRN0000", copy=False, required=True, readonly=True)
     
     vin = fields.Char(string="VIN", required=True)
-    make = fields.Char(string="Make", readonly=True, compute="_compute_make")
-    model = fields.Char(string="Model", readonly=True, compute="_compute_model")
-    year = fields.Char(string="Year", readonly=True, compute="_compute_year")
+    make = fields.Char(string="Make", readonly=True, compute="_compute_from_vin")
+    model = fields.Char(string="Model", readonly=True, compute="_compute_from_vin")
+    year = fields.Char(string="Year", readonly=True, compute="_compute_from_vin")
     
     license_plate = fields.Char(string="License Plate")
 
-    owner_id = fields.Many2one(comodel_name="res.partner", string="Owner")
+    owner_id = fields.Many2one(comodel_name="res.partner", ondelete="restrict")
     #first_name = fields.Char(string="First", required=True)
     #last_name = fields.Char(string="Last", required=True)
     email = fields.Char(related="owner_id.email")
@@ -56,26 +56,20 @@ class Registry(models.Model):
                 ● 1 - 4 Capital Letters
                 ● 1 - 3 Digits
                 ● Optional 2 Capital Letters""")
-    
-    @api.depends("vin")
-    def _compute_make(self):
-        for record in self:
-            if record.vin:
-                # Use regex to grab make portion of VIN (Make = first 2 capital letters)
-                record.make = record.vin[:1] + record.vin[1:2]
-                
-    @api.depends("vin")
-    def _compute_model(self):
-        for record in self:
-            if record.vin:
-                # Use regex to grab model portion of VIN (Make = second 2 capital letters)
-                record.model = record.vin[2:3] + record.vin[3:4]
-                
-    @api.depends("vin")
-    def _compute_year(self):
-        for record in self:
-            if record.vin:
-                # Use regex to grab year portion of VIN (Make = first 2 digits)
-                record.year = record.vin[4:5] + record.vin[5:6]
 
+    @api.depends("vin")
+    def _compute_from_vin(self):
+        registries_with_vin = self.filtered(lambda r: r.vin)
+        registries_with_vin._check_vin_pattern()
+        for registry in registries_with_vin:
+            # Use regex to grab make portion of VIN (Make = first 2 capital letters)
+            registry.make = registry.vin[:2]
+            # Use regex to grab model portion of VIN (Make = second 2 capital letters)
+            registry.model = registry.vin[2:4]
+            # Use regex to grab year portion of VIN (Make = first 2 digits)
+            registry.year = registry.vin[4:6]
+        for registry in (self - registries_with_vin):
+            registry.make = False
+            registry.model = False
+            registry.year = False
                 

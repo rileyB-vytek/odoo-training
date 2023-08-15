@@ -23,8 +23,8 @@
                         <group>
                             <separator string="Owner Information"/>
                             <field name="owner_id"/>
-                            <field name="email"/>
-                            <field name="phone"/>
+                            <field name="email" widget="email"/>
+                            <field name="phone" widget="phone"/>
                         </group>
                     </group>
                     <notebook>
