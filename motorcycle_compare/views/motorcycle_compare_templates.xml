@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <template id="motorcycle_compare_website" name="Motorcycle Comparison">
+            <t t-call="website.layout">
+                <div id="wrap" class="js_sale">
+                    <div class="container oe_website_sale pt-3">
+                        <section class="container" style="overflow-x:auto">
+                            <h1>Compare Motorcycles</h1>
+                            <table class="table table-bordered mt16 table-comparator" style="display: block; overlfow-x:scroll" id="o_comparelist_table">
+                                <thead>
+                                    <tr>
+                                        <td t-foreach="motorcycles" t-as="motorcycle" class="text-center o_ws_compare_image position-relative border-bottom-0" style="min-width: 325px;">
+                                            <strong><h3><span t-esc="motorcycle.name"/></h3></strong>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td t-foreach="motorcycles" t-as="motorcycle" class="text-center o_ws_compare_image position-relative border-bottom-0">
+                                            <img t-attf-src="/web/image/product.template/#{motorcycle.id}/image_256" class="img img-fluid" style="margin:auto;" alt="Motorcycle image"/>
+                                        </td>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td t-foreach="motorcycles" t-as="motorcycle" class="border-top-0">
+                                            <p><strong>Launch Date:</strong>
+                                                <span t-field="motorcycle.launch_date" t-field-options="{'format': 'long'}"/>
+                                            </p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td t-foreach="motorcycles" t-as="motorcycle" class="border-top-0">
+                                            <p><strong>Range:</strong>
+                                                <span t-field="motorcycle.range"/> miles
+                                            </p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td t-foreach="motorcycles" t-as="motorcycle" class="border-top-0">
+                                            <p><strong>HorsePower:</strong>
+                                                <span t-field="motorcycle.horsepower"/>
+                                            </p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td t-foreach="motorcycles" t-as="motorcycle" class="border-top-0">
+                                            <p><strong>Torque:</strong>
+                                                <span t-field="motorcycle.torque"/>
+                                            </p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td t-foreach="motorcycles" t-as="motorcycle" class="border-top-0">
+                                            <p><strong>Top Speed:</strong>
+                                                <span t-field="motorcycle.top_speed"/>
+                                            </p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td t-foreach="motorcycles" t-as="motorcycle" class="border-top-0">
+                                            <p><strong>Battery Capacity:</strong>
+                                                <span t-field="motorcycle.battery_capacity"/>
+                                            </p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td t-foreach="motorcycles" t-as="motorcycle" class="border-top-0">
+                                            <p><strong>Curb Weight:</strong>
+                                                <span t-field="motorcycle.curb_weight"/>
+                                            </p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td t-foreach="motorcycles" t-as="motorcycle" class="border-top-0" style="vertical-align: topfont-size: small; color: #7e7e7e;">
+                                            <p>
+                                                <span t-field="motorcycle.description_sale"/>
+                                            </p>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </section>
+                    </div>
+                </div>
+            </t>
+        </template>
+    </data>
+</odoo>
