@@ -23,7 +23,7 @@ class Course(models.Model):
 
     base_price = fields.Monetary(string="Base Price", currency_field="currency_id")
     additional_fee = fields.Monetary(string="Additional Fee", currency_field="currency_id")
-    total_price = fields.Monetary(string="Total Price", currency_field="currency_id", compute="_compute_total_price")
+    total_price = fields.Monetary(string="Total Price", currency_field="currency_id", compute="_compute_total_price", store=True)
 
     @api.depends("base_price", "additional_fee")
     def _compute_total_price(self):

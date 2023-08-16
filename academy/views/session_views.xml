@@ -74,6 +74,20 @@
             </search>
         </field>
     </record>
+
+    <record id="session_view_calendar" model="ir.ui.view">
+        <field name="name">session.view.calendar</field>
+        <field name="model">academy.session</field>
+        <field name="arch" type="xml">
+            <calendar string="Session Calendar"
+                date_start="date_start"
+                date_stop="date_end"
+                color="instructor_id"
+                mode="month">
+                <field name="instructor_id" filters="1" avatar_field="avatar_128"/>
+            </calendar>
+        </field>
+    </record>
 </odoo>
 
 
