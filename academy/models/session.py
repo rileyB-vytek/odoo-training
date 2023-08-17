@@ -11,9 +11,9 @@ class Session(models.Model):
     
     session_number = fields.Char(string="Session Number", default="S0000", copy=False, required=True, readonly=True)
     
-    date_start = fields.Datetime(string="Start Date", required=True)
+    date_start = fields.Datetime(string="Start Date")
     
-    date_end = fields.Datetime(string="End Date", required=True)
+    date_end = fields.Datetime(string="End Date")
 
     duration = fields.Integer(string="Session Duration", compute="_compute_session_duration", inverse="_inverse_session_duration", readonly=False)
     

@@ -1,4 +1,4 @@
-from odoo import api, fields, models
+from odoo import api, fields, models, _
 from odoo.exceptions import ValidationError
 class Course(models.Model):
     _name = "academy.course"
@@ -29,6 +29,6 @@ class Course(models.Model):
     def _compute_total_price(self):
         for record in self:
             if(record.base_price < 0):
-                raise ValidationError(('Base Price can not be negative'))
+                raise ValidationError(_('Base Price can not be negative'))
             record.total_price = record.base_price + record.additional_fee
         
