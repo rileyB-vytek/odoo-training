@@ -19,5 +19,65 @@
             <field name="license_plate">KAB123X</field>
             <field name="owner_id" ref="base.res_partner_address_5"/>
         </record>
+        <record id="motorcycle_product_1" model="product.template">
+            <field name="name">Indra Dual Sport</field>
+            <field name="launch_date" eval="(DateTime.now() + timedelta(days=1)).strftime('%Y-%m-%d')"/>
+            <field name="detailed_type">motorcycle</field>
+            <field name="battery_capacity">small</field>
+            <field name="range">68</field>
+            <field name="horsepower">46</field>
+            <field name="top_speed">98</field>
+            <field name="torque">78</field>
+            <field name="curb_weight">518</field>
+            <field name="image_1920" type="base64" file="motorcycle_registry/static/demo_data_images/moto1.jpg"/>
+            <field name="description_sale">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </field>
+        </record>
+        <record id="motorcycle_product_2" model="product.template">
+            <field name="name">Raijin/S</field>
+            <field name="launch_date" eval="(DateTime.now() + timedelta(days=2)).strftime('%Y-%m-%d')"/>
+            <field name="detailed_type">motorcycle</field>
+            <field name="battery_capacity">medium</field>
+            <field name="range">187</field>
+            <field name="horsepower">110</field>
+            <field name="top_speed">124</field>
+            <field name="torque">140</field>
+            <field name="curb_weight">518</field>
+            <field name="image_1920" type="base64" file="motorcycle_registry/static/demo_data_images/moto2.jpg"/>
+            <field name="description_sale">
+                Ut morbi tincidunt augue interdum. Mi eget mauris pharetra et. Donec adipiscing tristique risus nec. Pulvinar neque laoreet suspendisse interdum. Penatibus et magnis dis parturient montes nascetur ridiculus. Ipsum a arcu cursus vitae. Libero volutpat sed cras ornare. Varius quam quisque id diam. Varius quam quisque id diam vel quam elementum. Nullam eget felis eget nunc lobortis mattis aliquam faucibus. Nec feugiat nisl pretium fusce id velit. Id donec ultrices tincidunt arcu non sodales. Pellentesque nec nam aliquam sem et tortor. Id donec ultrices tincidunt arcu.
+            </field>
+        </record>
+        <record id="motorcycle_product_3" model="product.template">
+            <field name="name">Ukko Adventure</field>
+            <field name="launch_date" eval="(DateTime.now() + timedelta(days=3)).strftime('%Y-%m-%d')"/>
+            <field name="detailed_type">motorcycle</field>
+            <field name="battery_capacity">large</field>
+            <field name="range">180</field>
+            <field name="horsepower">110</field>
+            <field name="top_speed">112</field>
+            <field name="torque">166</field>
+            <field name="curb_weight">544</field>
+            <field name="image_1920" type="base64" file="motorcycle_registry/static/demo_data_images/moto3.jpg"/>
+            <field name="description_sale">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sed viverra tellus in hac habitasse platea. Amet nulla facilisi morbi tempus. Eu feugiat pretium nibh ipsum consequat nisl vel pretium. In cursus turpis massa tincidunt. A lacus vestibulum sed arcu non odio euismod. Quis lectus nulla at volutpat diam ut. Commodo elit at imperdiet dui accumsan sit amet. Accumsan lacus vel facilisis volutpat. Aliquam malesuada bibendum arcu vitae elementum curabitur vitae nunc. Ante metus dictum at tempor commodo. Rutrum quisque non tellus orci ac.
+            </field>
+        </record>
+        <record id="motorcycle_product_4" model="product.template">
+            <field name="name">Xolotl</field>
+            <field name="launch_date" eval="(DateTime.now() + timedelta(days=4)).strftime('%Y-%m-%d')"/>
+            <field name="detailed_type">motorcycle</field>
+            <field name="battery_capacity">medium</field>
+            <field name="range">150</field>
+            <field name="horsepower">46</field>
+            <field name="top_speed">90</field>
+            <field name="torque">78</field>
+            <field name="curb_weight">298</field>
+            <field name="image_1920" type="base64" file="motorcycle_registry/static/demo_data_images/moto4.jpg"/>
+            <field name="description_sale">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. In vitae turpis massa sed elementum tempus egestas sed sed. Amet consectetur adipiscing elit ut aliquam. Egestas quis ipsum suspendisse ultrices gravida dictum. Aliquam sem et tortor consequat id. Egestas tellus rutrum tellus pellentesque eu tincidunt tortor. Condimentum lacinia quis vel eros. Sed ullamcorper morbi tincidunt ornare massa. Adipiscing elit ut aliquam purus sit amet luctus venenatis lectus. Ac felis donec et odio pellentesque diam volutpat commodo sed. Turpis egestas sed tempus urna et pharetra pharetra. Adipiscing elit pellentesque habitant morbi tristique. Ac orci phasellus egestas tellus. At elementum eu facilisis sed odio morbi quis. Adipiscing vitae proin sagittis nisl rhoncus mattis rhoncus urna.
+            </field>
+        </record>
     </data>
 </odoo>
