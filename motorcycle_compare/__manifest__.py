@@ -9,7 +9,7 @@
     'author': 'rileyB-vytek',
     'website': 'https://github.com/rileyB-vytek/odoo-training',
     'category': 'Custom Modules/Tech Training',
-    'depends': ['base', 'stock', 'website'],
+    'depends': ['base', 'stock', 'website', 'motorcycle_registry'],
     'data': [
         'views/motorcycle_compare_templates.xml',
     ],

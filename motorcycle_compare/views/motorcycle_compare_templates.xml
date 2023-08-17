@@ -11,7 +11,7 @@
                                 <thead>
                                     <tr>
                                         <td t-foreach="motorcycles" t-as="motorcycle" class="text-center o_ws_compare_image position-relative border-bottom-0" style="min-width: 325px;">
-                                            <strong><h3><span t-esc="motorcycle.name"/></h3></strong>
+                                            <h3><span t-esc="motorcycle.name"/></h3>
                                         </td>
                                     </tr>
                                     <tr>
@@ -71,7 +71,7 @@
                                         </td>
                                     </tr>
                                     <tr>
-                                        <td t-foreach="motorcycles" t-as="motorcycle" class="border-top-0" style="vertical-align: topfont-size: small; color: #7e7e7e;">
+                                        <td t-foreach="motorcycles" t-as="motorcycle" class="border-top-0" style="vertical-align: top; font-size: small; color: #7e7e7e;">
                                             <p>
                                                 <span t-field="motorcycle.description_sale"/>
                                             </p>
